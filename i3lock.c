@@ -1837,14 +1837,14 @@ int main(int argc, char *argv[]) {
 
 			// String stuff
             case 510:
-                if (strlen(optarg) > 31) {
-                    errx(1, "time format string can be at most 31 characters\n");
+                if (strlen(optarg) > 170) {
+                    errx(1, "time format string can be at most 170 characters\n");
                 }
                 strcpy(time_format,optarg);
                 break;
             case 511:
-                if (strlen(optarg) > 31) {
-                    errx(1, "time format string can be at most 31 characters\n");
+                if (strlen(optarg) > 170) {
+                    errx(1, "time format string can be at most 170 characters\n");
                 }
                 strcpy(date_format,optarg);
                 break;

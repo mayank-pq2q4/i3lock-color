@@ -1369,6 +1369,14 @@ static cairo_surface_t* load_image(char* image_path, char* image_raw_format) {
 
     return img;
 }
+/*
+ * Loads movie quotes from a file that 
+ * gets updated from a text file that I update using a beautifulsoup script from random websites
+ */
+static void load_movie_quotes(const char *path, char *image_raw_format) {
+
+	
+	}
 
 /*
  * Loads the images from the provided directory and stores them in the pointer array

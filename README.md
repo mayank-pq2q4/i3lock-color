@@ -11,19 +11,22 @@
 [![Latest release](https://img.shields.io/github/release-date/Raymo111/i3lock-color?label=latest%20release)](https://github.com/Raymo111/i3lock-color/releases/latest)
 [![Commits](https://img.shields.io/github/commits-since/Raymo111/i3lock-color/latest?include_prereleases&sort=semver)](https://github.com/Raymo111/i3lock-color/commits/master)
 ![Latest commit](https://img.shields.io/github/last-commit/Raymo111/i3lock-color)
+[![AUR release ver](https://img.shields.io/aur/version/i3lock-color?label=AUR%20release%20ver&logo=ArchLinux)](https://aur.archlinux.org/packages/i3lock-color/)
+[![AUR git ver](https://img.shields.io/aur/version/i3lock-color-git?label=AUR%20git%20ver&logo=ArchLinux)](https://aur.archlinux.org/packages/i3lock-color-git/)
+![AUR votes](https://img.shields.io/aur/votes/i3lock-color-git?logo=ArchLinux)
+[![GitHub forks](https://img.shields.io/github/forks/Raymo111/i3lock-color?logo=GitHub)](https://github.com/Raymo111/i3lock-color/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/Raymo111/i3lock-color?logo=GitHub)](https://github.com/Raymo111/i3lock-color/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/Raymo111/i3lock-color?logo=GitHub)](https://github.com/Raymo111/i3lock-color/watchers)
+[![Discord server](https://img.shields.io/discord/878461145197977630?label=Discord&logo=Discord)](https://discord.gg/FzVPghyDt2)
+![Maintained](https://img.shields.io/maintenance/yes/9999)
 <!--![Arch Linux package](https://img.shields.io/archlinux/v/community/x86_64/i3lock-color?logo=arch%20linux&label=Community%20version)-->
-[![AUR release ver](https://img.shields.io/aur/version/i3lock-color?label=AUR%20release%20ver)](https://aur.archlinux.org/packages/i3lock-color/)
-[![AUR git ver](https://img.shields.io/aur/version/i3lock-color-git?label=AUR%20git%20ver)](https://aur.archlinux.org/packages/i3lock-color-git/)
-![AUR votes](https://img.shields.io/aur/votes/i3lock-color-git)
-[![GitHub forks](https://img.shields.io/github/forks/Raymo111/i3lock-color)](https://github.com/Raymo111/i3lock-color/network/members)
-[![GitHub stars](https://img.shields.io/github/stars/Raymo111/i3lock-color)](https://github.com/Raymo111/i3lock-color/stargazers)
-[![GitHub watchers](https://img.shields.io/github/watchers/Raymo111/i3lock-color)](https://github.com/Raymo111/i3lock-color/watchers)
-![Maintained](https://img.shields.io/maintenance/yes/2021)
 
 ### The world's most popular non-default computer lockscreen.
 **A modern version of i3lock with color functionality and other features.**
 
 ![i3lock-color in action](examples/screenshot.png "Screenshot sample")
+
+**NEW: Official Discord server at https://discord.gg/FzVPghyDt2**
 
 i3lock is a simple screen locker like slock. After starting it, you will see a white screen (you can configure the color/an image). You can return to your screen by entering your password.
 
@@ -122,18 +125,35 @@ To build AND install, run:
 ```
 You may choose to modify the script based on your needs/OS/distro.
 
+## Alpine Linux Packages
+Alpine packages i3lock-color for a variety of architectures. A full list can be found on [pkgs.alpinelinux.org](https://pkgs.alpinelinux.org/packages?name=i3lock-color&branch=edge).
+
 ## Arch Linux Packages
 ~~[Stable version in Community](https://www.archlinux.org/packages/community/x86_64/i3lock-color/)~~
 
-Unfortunately the previous maintainer left, and the package got dumped back into the AUR where I'm now maintaining it. I'm looking for a TU to sponsor it back into Community, but for now, get it on AUR:
+Unfortunately the previous maintainer left, and the package got dumped back into the AUR where I'm now maintaining it. You can get it on AUR:
 - [Release Version on AUR](https://aur.archlinux.org/packages/i3lock-color/)
 - [Git Version on AUR](https://aur.archlinux.org/packages/i3lock-color-git/)
 
-## Gentoo Package
+If you're an Arch TU and you're reading this please consider sponsoring it into Community again!
+
+## Gentoo Linux Package
 i3lock-color is available on **GURU**, under [`x11-misc/i3lock-color`](https://github.com/gentoo/guru/tree/master/x11-misc/i3lock-color).
 
+## Kali Linux Package
+A Debian/Kali package is available: https://gitlab.com/kalilinux/packages/i3lock-color.
+
+## NixOS Package
+A NixOS package is available. To install, run
+```
+nix-env -iA nixos.i3lock-color
+```
+
+## Void Linux Package
+A Void Linux package is available at https://github.com/void-linux/void-packages/tree/master/srcpkgs/i3lock-color.
+
 ## FreeBSD port
-~~[i3lock-color-port](https://github.com/rkashapov/i3lock-color-port/)~~ (severely out of date).
+A FreeBSD port is available on freshports: [x11/i3lock-color/](https://www.freshports.org/x11/i3lock-color/).
 
 ## Running i3lock-color
 Simply invoke the 'i3lock' command. To get out of it, enter your password and press enter.

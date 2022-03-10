@@ -48,7 +48,7 @@ AX_CODE_COVERAGE
 
 dnl is_release must be lowercase because AX_CHECK_ENABLE_DEBUG calls m4_tolower
 dnl on its fourth argument.
-AX_CHECK_ENABLE_DEBUG([yes], , [UNUSED_NDEBUG], [$is_release])
+AX_CHECK_ENABLE_DEBUG([no], , , [$is_release])
 
 AC_PROG_CC
 
@@ -124,19 +124,22 @@ AX_APPEND_FLAG([-pthread], [AM_CFLAGS])
 AX_CHECK_COMPILE_FLAG([-Wunused-value], [AX_APPEND_FLAG([-Wunused-value], [AM_CFLAGS])])
 AC_SUBST(AM_CFLAGS)
 
+AX_CHECK_BASH_COMPLETION
+AX_CHECK_ZSH_COMPLETION
+
 # Checks for header files.
 AC_CHECK_HEADERS([fcntl.h float.h inttypes.h limits.h locale.h netinet/in.h paths.h stddef.h stdint.h stdlib.h string.h sys/param.h sys/socket.h sys/time.h unistd.h], , [AC_MSG_FAILURE([cannot find the $ac_header header, which i3lock requires])])
 
 AC_CONFIG_FILES([Makefile])
 
-# Enable address sanitizer for non-release builds. The performance hit is a
+# Enable address sanitizer for debug builds. The performance hit is a
 # 50% increase of wallclock time for the testsuite on my machine.
-if test x$is_release = xyes; then
-	default_sanitizers=
-else
+if test "x$ax_enable_debug" = "xyes"; then
 	default_sanitizers=address
+else
+	default_sanitizers=
 fi
-AX_SANITIZERS(, [$default_sanitizers], [AC_DEFINE([I3LOCK_ASAN_ENABLED], [], [Enable ASAN])])
+AX_SANITIZERS(, [$default_sanitizers])
 
 AC_OUTPUT
 
